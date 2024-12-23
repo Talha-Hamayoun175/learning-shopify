@@ -1,0 +1,48 @@
+<section class="text-section" style="background-color: {{ section.settings.background_color | default: '#ffffff' }};">
+  {% if section.settings.text_content != blank %}
+    <div class="text-content" style="color: {{ section.settings.text_color | default: '#000000' }};">
+      {{ section.settings.text_content }}
+    </div>
+  {% else %}
+    <div class="text-content-error" style="color: {{ section.settings.text_color-e | default: '#000000' }};">
+      No content available. Please add text.
+    </div>
+  {% endif %}
+</section>
+
+{% schema %}
+{
+  "name": "Text Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text_content",
+      "label": "Text Content",
+      "default": "This is default text."
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "text_color-e",
+      "label": "Text Color",
+      "default": "#000000"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Text Section"
+    }
+  ]
+}
+{% endschema %}

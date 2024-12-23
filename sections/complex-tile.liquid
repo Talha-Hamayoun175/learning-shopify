@@ -1,0 +1,197 @@
+<section class="complex-content-section">
+  {% if section.settings.title != blank %}
+    <h2 class="section-title">{{ section.settings.title }}</h2>
+  {% endif %}
+
+  <div class="content-blocks-grid">
+    {% for block in section.blocks %}
+      <div class="content-block block-{{ block.type }}">
+        {% case block.type %}
+          {% when 'text_block' %}
+            <h3 class="block-title">{{ block.settings.block_title }}</h3>
+            <p class="block-content">{{ block.settings.block_text }}</p>
+
+          {% when 'image_block' %}
+            <div class="block-image">
+              <img src="{{ block.settings.image | img_url: 'large' }}" alt="{{ block.settings.alt_text }}">
+            </div>
+
+          {% when 'video_block' %}
+            <div class="block-video">
+              <video controls>
+                <source src="{{ block.settings.video_url }}" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+
+          {% when 'slider_block' %}
+            <div class="block-slider">
+              {% for slide_block in block.blocks %}
+                <div class="slider-item">
+                  <img
+                    src="{{ slide_block.settings.slide_image | img_url: 'large' }}"
+                    alt="{{ slide_block.settings.alt_text }}"
+                  >
+                  <p class="slider-caption">{{ slide_block.settings.caption }}</p>
+                </div>
+              {% endfor %}
+            </div>
+
+          {% when 'collapsible_block' %}
+            <div class="block-collapsible">
+              <button class="collapsible">{{ block.settings.collapsible_title }}</button>
+              <div class="collapsible-content">
+                <p>{{ block.settings.collapsible_text }}</p>
+              </div>
+            </div>
+
+          {% when 'cta_block' %}
+            <a href="{{ block.settings.cta_link }}" class="cta-button">{{ block.settings.cta_text }}</a>
+        {% endcase %}
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<style>
+  .complex-content-section {
+    background: {{ section.settings.background }};
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Complex Content Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "Welcome to the Complex Section"
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text-color",
+      "label": "Text Color",
+      "default": "#000000"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text_block",
+      "name": "Text Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "block_title",
+          "label": "Block Title",
+          "default": "Text Block Title"
+        },
+        {
+          "type": "textarea",
+          "id": "block_text",
+          "label": "Block Text",
+          "default": "This is some example text."
+        }
+      ]
+    },
+    {
+      "type": "image_block",
+      "name": "Image Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Block Image"
+        },
+        {
+          "type": "text",
+          "id": "alt_text",
+          "label": "Alt Text",
+          "default": "Image description"
+        }
+      ]
+    },
+    {
+      "type": "video_block",
+      "name": "Video Block",
+      "settings": [
+        {
+          "type": "url",
+          "id": "video_url",
+          "label": "Video URL"
+        }
+      ]
+    },
+    {
+      "type": "slide_block",
+      "name": "Slide Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "slide_image",
+          "label": "Slide Image"
+        },
+        {
+          "type": "text",
+          "id": "alt_text",
+          "label": "Alt Text"
+        },
+        {
+          "type": "text",
+          "id": "caption",
+          "label": "Caption",
+          "default": "Slide Caption"
+        }
+      ]
+    },
+    {
+      "type": "collapsible_block",
+      "name": "Collapsible Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "collapsible_title",
+          "label": "Collapsible Title",
+          "default": "Collapsible Block"
+        },
+        {
+          "type": "textarea",
+          "id": "collapsible_text",
+          "label": "Collapsible Text",
+          "default": "This is hidden content. Click to expand."
+        }
+      ]
+    },
+    {
+      "type": "cta_block",
+      "name": "CTA Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "cta_text",
+          "label": "CTA Text",
+          "default": "Learn More"
+        },
+        {
+          "type": "url",
+          "id": "cta_link",
+          "label": "CTA Link",
+          "default": "/"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "ComplexContentSection"
+    }
+  ]
+}
+{% endschema %}

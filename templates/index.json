@@ -1,0 +1,315 @@
+{
+  "sections": {
+    "slideshow_7BwLDB": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_7dp3Pi": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HP-1-wD5262-Blush-7.jpg",
+            "heading": "Summer Rayon Abayas New",
+            "heading_size": "h1",
+            "subheading": "Feminine, fashionable, and flattering, our beautiful popular rayon abayas are a must-have in any wardrobe. The cool new summer colors, elegant cuts, graceful details, and lusciously soft material make our summer rayon abayas perfect for any occasion.",
+            "button_label": "Shop Women's New Arrivals",
+            "link": "",
+            "button_style_secondary": true,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 50,
+            "color_scheme": "scheme-3",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_W4cnr7": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HP-2-mG1381.jpg",
+            "heading": "Cool Comfort",
+            "heading_size": "h1",
+            "subheading": "Keep it classic with just the right balance of interest with our Dihya Thobe, characterized by sleek contrast trim.",
+            "button_label": "Shop Men's New Arrivals",
+            "link": "",
+            "button_style_secondary": true,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 50,
+            "color_scheme": "scheme-3",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_eiDqwX": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HP-2-wD9391-Dazzling-Blue-5.jpg",
+            "heading": "Modern and Modest",
+            "heading_size": "h1",
+            "subheading": "There's something about ruffles which is just so absolutely feminine. Add the practical sleeves and zipper opening and put it all on a cool, summer fabric and it seems like we've got a winner here.",
+            "button_label": "Shop Women's New Arrivals",
+            "link": "",
+            "button_style_secondary": true,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 50,
+            "color_scheme": "scheme-4",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_wqDTiG": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HP-3-wD3866-Sage-3.jpg",
+            "heading": "Freshly Feminine",
+            "heading_size": "h1",
+            "subheading": "This abaya channels a sophisticated take on contemporary cool. The raglan sleeves and contrasting colors are minimalistic, yet unique, giving off casual vibes. This flattering piece is cut for a loose draped fit, as is evident by the ruching at the neckline.",
+            "button_label": "Shop Women's New Arrivals",
+            "link": "",
+            "button_style_secondary": true,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 50,
+            "color_scheme": "scheme-4",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_7dp3Pi",
+        "slide_W4cnr7",
+        "slide_eiDqwX",
+        "slide_wqDTiG"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "dots",
+        "auto_rotate": true,
+        "change_slides_speed": 3,
+        "image_behavior": "ambient",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "rich_text_JgyarY": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_hcBtWm": {
+          "type": "heading",
+          "settings": {
+            "heading": "SHUKR ISLAMIC & MODEST CLOTHING",
+            "heading_size": "h2"
+          }
+        },
+        "text_EDkHfD": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The leading online destination for high quality, contemporary modest fashion. Shop in peace as our Islamic clothing is ethically produced in sweatshop-free premises. Our modest fashion for women features hijabs, abayas, jilbabs, maxi dresses, tunics, wide-leg pants and maxi skirts; our men’s Islamic clothing includes kufis, thobes, jubbas, and long shirts.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_hcBtWm",
+        "text_EDkHfD"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Men’s & Women’s New Arrivals",
+            "heading_size": "h1"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop now",
+            "button_link_1": "shopify:\/\/collections\/all",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "button"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/What-are-Thobes-and-Dishdashas-plus-Buying-Guide.jpg",
+        "image_2": "shopify:\/\/shop_images\/New-Arrivals-wD8451.webp",
+        "image_overlay_opacity": 60,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-4",
+        "image_behavior": "ambient",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "New In",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "women-s",
+        "products_to_show": 5,
+        "columns_desktop": 4,
+        "full_width": true,
+        "show_view_all": false,
+        "view_all_style": "link",
+        "enable_desktop_slider": true,
+        "color_scheme": "scheme-2",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 44,
+        "padding_bottom": 36
+      }
+    },
+    "collage_VwNVdb": {
+      "type": "collage",
+      "blocks": {
+        "image_8XdT8x": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2287_19fc7ef5-1c9e-40d2-8a3a-e519633a6335.jpg"
+          }
+        },
+        "product_4aPMGY": {
+          "type": "product",
+          "settings": {
+            "product": "red-searf-shemagh",
+            "second_image": false
+          }
+        },
+        "collection_Lq6jFX": {
+          "type": "collection",
+          "settings": {
+            "collection": "iqal-headband"
+          }
+        }
+      },
+      "block_order": [
+        "image_8XdT8x",
+        "product_4aPMGY",
+        "collection_Lq6jFX"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "desktop_layout": "left",
+        "mobile_layout": "column",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "scheme-2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_gUa98P": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_DB8imG": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mw1101-main_1_360x_afc1cbb2-76fe-4e90-8b26-00897255ccd3.webp",
+            "title": "Men's Shalwar Kameez",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_6rqqKb": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ws0901-main.jpg",
+            "title": "Women's Professional",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_FcYwan": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mg1451-main_540x_614a20f0-06e7-4eec-a54b-e64acb64090e.jpg",
+            "title": "Men's Thobes",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_DB8imG",
+        "column_6rqqKb",
+        "column_FcYwan"
+      ],
+      "settings": {
+        "title": "Shop Our Categries",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "Show All",
+        "button_link": "",
+        "color_scheme": "scheme-2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "video_A3b4Pg": {
+      "type": "video",
+      "settings": {
+        "heading": "",
+        "heading_size": "h2",
+        "enable_video_looping": false,
+        "video_url": "https:\/\/www.youtube.com\/watch?v=e7N9N4zIYSE",
+        "cover_image": "shopify:\/\/shop_images\/istockphoto-1458836067-612x612.jpg",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "scheme-2",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    }
+  },
+  "order": [
+    "slideshow_7BwLDB",
+    "rich_text_JgyarY",
+    "image_banner",
+    "featured_collection",
+    "collage_VwNVdb",
+    "multicolumn_gUa98P",
+    "video_A3b4Pg"
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "image_FfV44r": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/libas-bebe-logo_c8e2defd-0bfb-48e7-8f9a-b9730012e5d0.png",
+            "image_width": 140,
+            "alignment": "center"
+          }
+        },
+        "link_list_cVUmNe": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "footer"
+          }
+        },
+        "link_list_9VRAf4": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Policies",
+            "menu": "policies"
+          }
+        },
+        "brand_information_Li49tm": {
+          "type": "brand_information",
+          "settings": {
+            "show_social": true
+          }
+        }
+      },
+      "block_order": [
+        "image_FfV44r",
+        "link_list_cVUmNe",
+        "link_list_9VRAf4",
+        "brand_information_Li49tm"
+      ],
+      "settings": {
+        "color_scheme": "scheme-3",
+        "newsletter_enable": true,
+        "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": true,
+        "show_social": true,
+        "enable_country_selector": false,
+        "enable_language_selector": true,
+        "payment_enable": true,
+        "show_policy": true,
+        "margin_top": 0,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

@@ -1,0 +1,48 @@
+<section class="big-content-section">
+  {% if section.settings.title != blank %}
+    <h2 class="section-title">{{ section.settings.title }}</h2>
+  {% endif %}
+
+  {% if section.settings.description != blank %}
+    <p class="section-description">{{ section.settings.description }}</p>
+  {% endif %}
+
+  {% if section.settings.big_content != blank %}
+    <div class="big-content">
+      {{ section.settings.big_content }}
+    </div>
+  {% else %}
+    <div class="big-content">
+      Default big content goes here. Add your content to replace this.
+    </div>
+  {% endif %}
+</section>
+
+{% schema %}
+  {
+    "name": "Big Content Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Section Title",
+        "default": "This is a Big Content Section"
+      }, {
+        "type": "textarea",
+        "id": "description",
+        "label": "Section Description",
+        "default": "Add a short description of this section."
+      }, {
+        "type": "textarea",
+        "id": "big_content",
+        "label": "Big Content",
+        "default": "Add your big content here. This could be a large block of text or other information."
+      }
+    ],
+    "presets": [
+      {
+        "name": "Big Content"
+      }
+    ]
+  }
+{% endschema %}

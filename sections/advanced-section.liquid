@@ -1,0 +1,54 @@
+<section class="slider-section">
+  <div class="slider">
+    <div class="slider-wrapper">
+      {% for block in section.blocks %}
+        {% if block.type == 'slide_block' %}
+          <div class="slide">
+            <img src="{{ block.settings.slide_image | img_url: 'large' }}" alt="{{ block.settings.alt_text }}">
+            {% if block.settings.caption != blank %}
+              <div class="caption">{{ block.settings.caption }}</div>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+    <button class="slider-prev">❮</button>
+    <button class="slider-next">❯</button>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Image Slider Section",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "slide_block",
+      "name": "Slide Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "slide_image",
+          "label": "Slide Image"
+        },
+        {
+          "type": "text",
+          "id": "alt_text",
+          "label": "Alt Text"
+        },
+        {
+          "type": "text",
+          "id": "caption",
+          "label": "Caption",
+          "default": "Slide Caption"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Advance Section"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,148 @@
+{
+  "sections": {
+    "cart-items": {
+      "type": "main-cart-items",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "padding_top": 32,
+        "padding_bottom": 100
+      }
+    },
+    "cart-footer": {
+      "type": "main-cart-footer",
+      "blocks": {
+        "subtotal": {
+          "type": "subtotal",
+          "settings": {}
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "subtotal",
+        "buttons"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "padding_top": 20,
+        "padding_bottom": 40
+      }
+    },
+    "featured_collection_jGXnzf": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured collection",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "hijab",
+        "products_to_show": 11,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": true,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 76,
+        "padding_bottom": 40
+      }
+    },
+    "content_tile_QcrLpC": {
+      "type": "content-tile",
+      "blocks": {
+        "text_block_kHQXbP": {
+          "type": "text_block",
+          "settings": {
+            "block_title": "SHUKR ISLAMIC & MODEST CLOTHING",
+            "block_text": "The leading online destination for high quality, contemporary modest fashion. Shop in peace as our Islamic clothing is ethically produced in sweatshop-free premises. Our modest fashion for women features hijabs, abayas, jilbabs, maxi dresses, tunics, wide-leg pants and maxi skirts; our men’s Islamic clothing includes kufis, thobes, jubbas, and long shirts."
+          }
+        },
+        "image_block_rjgy3G": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/What_is_the_Thobe_Significance_of_Wearing_it.jpg",
+            "alt_text": "Image description"
+          }
+        },
+        "cta_block_k4kMiA": {
+          "type": "cta_block",
+          "settings": {
+            "cta_text": "Show All",
+            "cta_link": "shopify:\/\/collections\/jubbas"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_kHQXbP",
+        "image_block_rjgy3G",
+        "cta_block_k4kMiA"
+      ],
+      "settings": {
+        "title": "SHUKR ISLAMIC & MODEST CLOTHING"
+      }
+    },
+    "cart_tile_fw8fTg": {
+      "type": "cart-tile",
+      "settings": {
+        "title": "SHUKR ISLAMIC & MODEST CLOTHING",
+        "description": "SHUKR ISLAMIC & MODEST CLOTHING",
+        "big_content": "The leading online destination for high quality, contemporary modest fashion. Shop in peace as our Islamic clothing is ethically produced in sweatshop-free premises. Our modest fashion for women features hijabs, abayas, jilbabs, maxi dresses, tunics, wide-leg pants and maxi skirts; our men’s Islamic clothing includes kufis, thobes, jubbas, and long shirts."
+      }
+    },
+    "complex_tile_68GX44": {
+      "type": "complex-tile",
+      "blocks": {
+        "text_block_QUNVim": {
+          "type": "text_block",
+          "settings": {
+            "block_title": "SHUKR ISLAMIC & MODEST CLOTHING",
+            "block_text": "The leading online destination for high quality, contemporary modest fashion. Shop in peace as our Islamic clothing is ethically produced in sweatshop-free premises. Our modest fashion for women features hijabs, abayas."
+          }
+        },
+        "image_block_EwW8wD": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/abaya-wD6231-Black_650x_4e66f2eb-4452-4024-ac6a-d5efe3f2c935.jpg",
+            "alt_text": "Image description"
+          }
+        },
+        "text_block_d97TD9": {
+          "type": "text_block",
+          "settings": {
+            "block_title": "SHUKR ISLAMIC & MODEST CLOTHING",
+            "block_text": "The leading online destination for high quality, contemporary modest fashion. Shop in peace as our Islamic clothing is ethically produced in sweatshop-free premises. Our modest fashion for women features hijabs."
+          }
+        }
+      },
+      "block_order": [
+        "text_block_QUNVim",
+        "image_block_EwW8wD",
+        "text_block_d97TD9"
+      ],
+      "settings": {
+        "title": "SHUKR ISLAMIC & MODEST CLOTHING",
+        "background": "#d9d9d9",
+        "text-color": "#000000"
+      }
+    }
+  },
+  "order": [
+    "cart-items",
+    "cart-footer",
+    "featured_collection_jGXnzf",
+    "content_tile_QcrLpC",
+    "cart_tile_fw8fTg",
+    "complex_tile_68GX44"
+  ]
+}

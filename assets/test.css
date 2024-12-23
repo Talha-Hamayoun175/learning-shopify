@@ -1,0 +1,18 @@
+.text-section {
+    padding: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.text-section .text-content, .text-content-error {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.text-section .text-content::first-letter {
+    font-size: 24px;
+    font-weight: bold;
+}

@@ -1,0 +1,177 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "easyreviews_star_rating_ethFYX": {
+          "type": "shopify:\/\/apps\/easyreviews\/blocks\/star_rating\/1341251b-09d7-46f3-ba6a-e732a50e97a5",
+          "disabled": true,
+          "settings": {}
+        },
+        "rating_dfUeif": {
+          "type": "rating",
+          "disabled": true,
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "inventory_FKr8XD": {
+          "type": "inventory",
+          "settings": {
+            "text_style": "body",
+            "inventory_threshold": 10,
+            "show_inventory_quantity": true
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        },
+        "collapsible_tab_g6Layr": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Style & Features",
+            "icon": "leather",
+            "content": "<p>Crafted from a midweight fabric, this jubba works well for most seasons. Guaranteed to make heads turn, wear this to jumu'ah and special events.<br\/><br\/><strong>Note: This is a Made-To-Order design which we specially produce for you. Please note that the current processing time for all Made-To-Order designs is 2 weeks.There is also a length customization option available if you need adjustments to our standard lengths.<\/strong><\/p><ul><li>Hood<\/li><li>Wooden button and button loops front<\/li><li>Patch pockets<\/li><li>Contrast color hood, button placket and pocket trim<\/li><li>Model is 184cm (6 feet) and wearing size L<\/li><li>Item Code: mC7601<\/li><\/ul>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_43dUTr": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Size Guide",
+            "icon": "ruler",
+            "content": "<p>SHUKR has 2 sizing's charts to help you choose the correct size: 1) a general Body Size Chart and 2) a Garment Measurements Chart for each specific clothing item. Please refer to both charts to guarantee choosing your correct size. Use the body size chart to take the measurements of your own body and the garment measurements chart to see the measurements of the actual clothing itself, which you can then compare to any item of clothing you already own to see if it is similar or not.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_xw89FV": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Fabric & Care",
+            "icon": "shirt",
+            "content": "<ul><li>Fabric: Rayon 76%, Polyester 24%<\/li><li>Fabric Care: Machine Wash<\/li><li>Fabric Weight: Heavy (242 gsm)<\/li><li>Fabric Type: Woven - Dobby<\/li><li>Fabric Code: R132<\/li><\/ul><p><strong>Rayon: <\/strong>Rayon is soft and comfortable, and drapes beautifully. It is even more moisture absorbent than cotton, making it a comfortable fabric to wear all year long.<br\/>When SHUKR uses the term Viscose instead of Rayon to describe fabric, it refers to a higher quality fabric with extra sheen and softness compared to regular Rayon.<\/p><p><strong>Polyester: <\/strong>Polyester is extremely easy to care for, which is why it is extensively used as a blend with other fibers. Polyester is strong and resistant to shrinkage, stretching, wrinkling, and abrasion. It is readily washable and dries quickly, perfect for people on the go.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_7ztMKU": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping & Returns",
+            "icon": "truck",
+            "content": "<p><strong>Shipping<\/strong><br\/>FREE for orders over $150.<br\/>$9.95 for orders between $75 - $150.<br\/>$14.95 for orders under $75<br\/>Delivery time: please click link for further details.<br\/><strong>Returns<\/strong><br\/>Avoid returns by consulting the Size Guide tab above before placing your order.<br\/>Look at <span style=\"text-decoration:underline\">both<\/span> size charts – the <span style=\"text-decoration:underline\">body size<\/span> chart and the <span style=\"text-decoration:underline\">garment measurements<\/span> chart.<br\/>Returns shipping costs $9.95 for the first item and $4.95 for each additional item: returning 1 item will cost $9.95; 2 items will cost $14.90; 3 items will cost $19.85 etc.<br\/>Returns allowed within 30 days of purchase date.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "easyreviews_star_rating_ethFYX",
+        "rating_dfUeif",
+        "title",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "inventory_FKr8XD",
+        "buy_buttons",
+        "description",
+        "share",
+        "collapsible_tab_g6Layr",
+        "collapsible_tab_43dUTr",
+        "collapsible_tab_xw89FV",
+        "collapsible_tab_7ztMKU"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-2",
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "cover",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "hover",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "1734940454793d68d0": {
+      "type": "apps",
+      "blocks": {
+        "easyreviews_product_review_GkGDDN": {
+          "type": "shopify:\/\/apps\/easyreviews\/blocks\/product_review\/1341251b-09d7-46f3-ba6a-e732a50e97a5",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "easyreviews_product_review_GkGDDN"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "related-products",
+    "1734940454793d68d0"
+  ]
+}

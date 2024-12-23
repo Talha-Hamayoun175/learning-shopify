@@ -1,0 +1,99 @@
+<section class="advanced-content-section">
+  {% if section.settings.title != blank %}
+    <h2 class="section-title">{{ section.settings.title }}</h2>
+  {% endif %}
+
+  {% if section.blocks.size > 0 %}
+    <div class="content-blocks">
+      {% for block in section.blocks %}
+        <div class="block block-{{ block.id }}">
+          {% case block.type %}
+            {% when 'text_block' %}
+              <h3 class="block-title">{{ block.settings.block_title }}</h3>
+              <p class="block-content">{{ block.settings.block_text }}</p>
+
+            {% when 'image_block' %}
+              <div class="block-image">
+                <img src="{{ block.settings.image | img_url: 'large' }}" alt="{{ block.settings.alt_text }}">
+              </div>
+
+            {% when 'cta_block' %}
+              <div class="cta">
+                <a href="{{ block.settings.cta_link }}" class="cta-button">{{ block.settings.cta_text }}</a>
+              </div>
+
+          {% endcase %}
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+</section>
+
+{% schema %}
+  {
+    "name": "Advanced Content Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Section Title",
+        "default": "This is an Advanced Content Section"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "text_block",
+        "name": "Text Block",
+        "settings": [
+          {
+            "type": "text",
+            "id": "block_title",
+            "label": "Block Title",
+            "default": "Text Block Title"
+          }, {
+            "type": "textarea",
+            "id": "block_text",
+            "label": "Block Text",
+            "default": "This is some example text."
+          }
+        ]
+      }, {
+        "type": "image_block",
+        "name": "Image Block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Block Image"
+          }, {
+            "type": "text",
+            "id": "alt_text",
+            "label": "Alt Text",
+            "default": "Image description"
+          }
+        ]
+      }, {
+        "type": "cta_block",
+        "name": "Call to Action Block",
+        "settings": [
+          {
+            "type": "text",
+            "id": "cta_text",
+            "label": "CTA Text",
+            "default": "Click Here"
+          }, {
+            "type": "url",
+            "id": "cta_link",
+            "label": "CTA Link",
+            "default": "/"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Advanced Section"
+      }
+    ]
+  }
+{% endschema %}

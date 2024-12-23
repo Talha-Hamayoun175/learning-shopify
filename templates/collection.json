@@ -1,0 +1,113 @@
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "scheme-3"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 16,
+        "columns_desktop": 3,
+        "color_scheme": "scheme-2",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "enable_filtering": true,
+        "filter_type": "vertical",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_6MXLy4": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Men's Professional",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "thobe",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-2",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_cMk3ed": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_NfKNHp": {
+          "type": "heading",
+          "settings": {
+            "heading": "Shirtdress Abaya with Godets",
+            "heading_size": "h2"
+          }
+        },
+        "button_p66cgW": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "text_BTJ8RV": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Say salam to your new favorite abaya! Cut to flow, flatter, and fit, this abaya provides a beautiful street style perfect for wear practically anywhere! It's made from our super comfy modal and cotton blend jersey.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_NfKNHp",
+        "button_p66cgW",
+        "text_BTJ8RV"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/abaya-wD6231-Black_650x_ea9314f3-4222-4b9a-86b4-d53d929abbf7.jpg",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "content_layout": "overlap",
+        "section_color_scheme": "scheme-2",
+        "color_scheme": "scheme-3",
+        "image_behavior": "ambient",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid",
+    "featured_collection_6MXLy4",
+    "image_with_text_cMk3ed"
+  ]
+}
