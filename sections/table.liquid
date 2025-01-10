@@ -1,0 +1,24 @@
+<div class="page-width">
+  <table style="margin: 20px;">
+    {% content_for 'block', type: 'table-header', id: 'table-header' %}
+    <tbody>
+        {%content_for 'blocks' %}
+    </tbody>
+  </table>
+</div>
+
+{% schema %}
+{
+  "name": "Table",
+  "blocks": [
+    {
+      "type": "table-row"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Table"
+    }
+  ]
+}
+{% endschema %}

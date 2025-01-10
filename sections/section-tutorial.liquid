@@ -1,0 +1,125 @@
+<link rel="stylesheet" href="{{ 'main.css' | asset_url }}">
+
+<section
+  class="section-tutorial"
+>
+  <div class="content-wrapper">
+    <h1>{{ section.settings.heading }}</h1>
+    {%- render 'section-tutorial-s' -%}
+    <p>{{ section.settings.description }}</p>
+
+    {% if section.settings.show_button %}
+      <a href="{{ section.settings.button_link }}" class="btn">{{ section.settings.button_text }}</a>
+    {% endif %}
+
+    <div>
+      <p>Dropdown Option: {{ section.settings.select_option }}</p>
+      <p>Range Value: {{ section.settings.range_value }}</p>
+      <p>Number: {{ section.settings.number_value }}</p>
+      <p>Radio Button Choice: {{ section.settings.radio_choice }}</p>
+    </div>
+  </div>
+
+  {% if section.settings.background_image %}
+    {{ section.settings.background_image |  image_url: width: 1000 |  image_tag: style:"height: 100vh; object-fit: cover" }}
+  {% endif %}
+
+</section>
+<script src="{{ 'section-tutorial.js' | asset_url }}" defer="defer"></script>
+
+{% schema %}
+{
+  "name": "Custom Settings Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Custom Settings Section"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "This is a customizable section."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_button",
+      "label": "Show Button",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Click Me"
+    },
+    {
+      "type": "text",
+      "id": "button_link",
+      "label": "Button Link",
+      "default": "#"
+    },
+    {
+      "type": "range",
+      "id": "range_value",
+      "label": "Range Value",
+      "min": 1,
+      "max": 100,
+      "step": 1,
+      "default": 50
+    },
+    {
+      "type": "number",
+      "id": "number_value",
+      "label": "Number Input",
+      "default": 10
+    },
+    {
+      "type": "select",
+      "id": "select_option",
+      "label": "Dropdown Option",
+      "options": [
+        { "value": "option1", "label": "Option 1" },
+        { "value": "option2", "label": "Option 2" },
+        { "value": "option3", "label": "Option 3" }
+      ],
+      "default": "option1"
+    },
+    {
+      "type": "radio",
+      "id": "radio_choice",
+      "label": "Radio Choice",
+      "options": [
+        { "value": "choice1", "label": "Choice 1" },
+        { "value": "choice2", "label": "Choice 2" }
+      ],
+      "default": "choice1"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "section-tutorial",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

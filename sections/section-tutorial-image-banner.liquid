@@ -1,0 +1,277 @@
+{{ 'sections-tutorial-image-banner.css' | asset_url | stylesheet_tag }}
+
+<div>
+  <h2 style="text-align: {{ section.settings['vertical_alignment'] }};">
+    {{ section.settings['title-id'] }}
+  </h2>
+</div>
+
+<div class="promotion-holder">
+  {% for block in section.blocks %}
+    {% if block.type == 'promotion-item' %}
+      <div class="text-holder">
+        <h2>{{ block.settings['title-id'] }}</h2>
+        {{ block.settings.image_with_text_image | image_url: width: 500 | image_tag }}
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
+
+<div>
+  <h2>image picker</h2>
+  {% if section.settings.background_image %}
+    {{
+      section.settings.background_image
+      | image_url: width: 500
+      | image_tag: style: 'object-fit: cover; width: 500px; height: 500px'
+    }}
+  {% endif %}
+</div>
+
+<div>
+  <h2>video settings</h2>
+  {{
+    section.settings['video-setting']
+    | video_tag: controls: true, style: 'width: 500px; height: 500px', autoplay: true, image_size: '500x'
+  }}
+</div>
+
+<h2>URL setting</h2>
+<a href="{{section.settings.url-setting}}">Go to About Us</a>
+
+<h2>html setting</h2>
+<div>
+  {{ section.settings['html-id'] }}
+</div>
+
+<h2>product setting</h2>
+<div>
+  <p>
+    product: {{ section.settings.product_id  | newline_to_br}}
+  </p>
+  <p>
+    price: {{ section.settings.product_id.variants[0].price | money |  newline_to_br}}
+  </p>
+  <p>
+    Decription: {{ section.settings.product_id.description | newline_to_br }}
+  </p>
+</div>
+
+<h2>product list setting</h2>
+
+{% for product in section.settings['product-list_id'] %}
+<p>
+  {{product | newline_to_br}}
+  <br>
+  {{ product.title | newline_to_br}}
+  <br>
+  {{ product.variants[0].price | money | newline_to_br}}
+  <br>
+  {{ product.description | newline_to_br}}
+</p>
+{% endfor %}
+
+<h2>collection setting</h2>
+<div>
+  collection: {{ section.settings.collection_id }} - {{section.settings.collection_id.products.size}}
+</div>
+
+<h2>collection list setting</h2>
+
+{% for product in section.settings['collection-list_id'] %}
+<p>
+  {{product}} | {{product.title}} - {{product.products.size}}
+</p>
+{% endfor %}
+
+<h2>page setting</h2>
+<div>
+  {{section.settings.page-setting-id}}
+</div>
+<h2>article setting</h2>
+<div>
+  {{section.settings.article-setting-id}}
+</div>
+<h2>blog setting</h2>
+<div>
+  {{section.settings.blog-setting-id}}
+</div>
+<h2>link list setting</h2>
+<div>
+  {{section.settings.link-list-setting-id}}
+</div>
+
+<h2>font picker</h2>
+<div>
+  font setting: {{section.settings.font-picker-id.family}}
+</div>
+
+<style>
+  {{section.settings.font-picker-id | font_face: font_display: 'swap'}}
+  .promotion-group * {
+    font-family: {{section.settings.font-picker-id.family}};
+  }
+</style>
+
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/{{section.settings.video_url_setting.id }}"
+  title="youtube"
+  frameborder="0"
+  allow="autoplay"
+  allowfullscreen
+>
+</iframe>
+
+{% schema %}
+{
+  "name": "promotion group",
+  "tag": "section",
+  "class": "promotion-group",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Title",
+      "id": "title-id"
+    },
+    {
+      "type": "select",
+      "id": "vertical_alignment",
+      "label": "Vertical alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "video",
+      "label": "Video setting",
+      "id": "video-setting"
+    },
+    {
+      "type": "video_url",
+      "id": "video_url_setting",
+      "label": "Video URL",
+      "accept": ["youtube"],
+      "placeholder": "youtube url"
+    },
+
+    {
+      "type": "url",
+      "label": "url setting",
+      "id": "url-setting"
+    },
+    {
+      "type": "html",
+      "label": "html-setting",
+      "id": "html-id"
+    },
+    {
+      "type": "product",
+      "label": "product-setting",
+      "id": "product_id"
+    },
+    {
+      "type": "product_list",
+      "label": "product-list-setting",
+      "id": "product-list_id"
+    },
+    {
+      "type": "collection",
+      "label": "colection-setting",
+      "id": "collection_id"
+    },
+    {
+      "type": "collection_list",
+      "label": "collection-list-setting",
+      "id": "collection-list_id"
+    },
+    {
+      "type": "page",
+      "label": "page setting",
+      "id": "page-setting-id"
+    },
+    {
+      "type": "article",
+      "label": "article setting",
+      "id": "article-setting-id"
+    },
+    {
+      "type": "blog",
+      "label": "blog setting",
+      "id": "blog-setting-id"
+    },
+    {
+      "type": "link_list",
+      "label": "link list setting",
+      "id": "link-list-setting-id"
+    },
+    {
+      "type": "font_picker",
+      "label": "font-picker",
+      "id": "font-picker-id",
+      "default":"assistant_n4"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "promotion item",
+      "type": "promotion-item",
+      "settings": [
+        {
+          "type": "text",
+          "label": "Title",
+          "id": "title-id"
+        },
+        {
+          "type": "select",
+          "id": "vertical_alignment",
+          "label": "Vertical alignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "left"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_with_text_image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "promotion group"
+    }
+  ]
+}
+{% endschema %}

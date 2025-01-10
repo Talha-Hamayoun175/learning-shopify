@@ -1,0 +1,21 @@
+<div class="page-width">
+    <tr {{block.shopify_attributes}}>
+        {% content_for 'blocks' %}
+    </tr>
+</div>
+
+{% schema %}
+{
+    "name": "Table row",
+    "blocks": [
+        {
+            "type": "table-cell"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Table Row"
+        }
+    ]
+}
+{% endschema %}

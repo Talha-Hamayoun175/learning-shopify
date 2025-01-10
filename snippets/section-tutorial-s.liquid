@@ -1,0 +1,313 @@
+{{ 'sections-tutorial-image-banner.css' | asset_url | stylesheet_tag }}
+
+{% assign myFirstVar = 'First' %}
+{% assign mySecondVar = 'Second' %}
+{% assign myThirdVar = 'Third' %}
+
+<p>{{ myFirstVar }}</p>
+<p>{{ mySecondVar }}</p>
+<p>{{ myThirdVar }}</p>
+
+{% assign numberVar = 42 %}
+{% assign floatVar = 3.14 %}
+<p>Number: {{ numberVar }}</p>
+<p>Float: {{ floatVar }}</p>
+
+{% assign booleanVar = 'false' %}
+{% if booleanVar == 'true' %}
+  <p>The boolean is true!</p>
+{% else %}
+  <p>The boolean is false!</p>
+{% endif %}
+
+{% assign arrayVar = 'apple,banana,cherry' | split: ',' %}
+<ul>
+  {% for items in arrayVar %}
+    <li>{{ items }}</li>
+  {% endfor %}
+</ul>
+
+{% assign emptyVar = null %}
+{% if emptyVar == null %}
+  <p>The variable is empty!</p>
+{% endif %}
+
+<h1>Welcome to the Liquid Project</h1>
+
+<!-- Display string variables -->
+<div class="result">
+  <p><strong>First Variable:</strong> {{ myFirstVar }}</p>
+  <p><strong>Second Variable:</strong> {{ mySecondVar }}</p>
+  <p><strong>Third Variable:</strong> {{ myThirdVar }}</p>
+</div>
+
+<!-- Display number and float variables -->
+<div class="result">
+  <p><strong>Number:</strong> {{ numberVar }}</p>
+  <p><strong>Float:</strong> {{ floatVar }}</p>
+</div>
+
+<!-- Boolean conditional logic -->
+<div class="result boolean-message">
+  {% assign booleanVar = 'false' %}
+  {% if booleanVar == 'true' %}
+    <p>The boolean is true!</p>
+  {% else %}
+    <p>The boolean is false!</p>
+  {% endif %}
+</div>
+
+<h1>Input Form Example</h1>
+<!-- Form for collecting inputs -->
+<div class="wrap">
+  <form method="post" id="input-form">
+    <div class="form-group">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" required>
+    </div>
+
+    <div class="form-group">
+      <label for="color">Favorite Color:</label>
+      <select id="color" name="color" required>
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+        <option value="yellow">Yellow</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Gender:</label>
+      <label for="male"> <input type="radio" id="male" name="gender" value="Male" required> Male </label>
+      <label for="female"> <input type="radio" id="female" name="gender" value="Female" required> Female </label>
+    </div>
+
+    <div class="form-group">
+      <label for="terms">
+        <input type="checkbox" id="terms" name="terms" required> I agree to the terms and conditions.
+      </label>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+<!-- Display the input values -->
+<div class="result">
+  <h2>Your Submitted Information:</h2>
+  <p id="result-name"></p>
+  <p id="result-age"></p>
+  <p id="result-color"></p>
+  <p id="result-gender"></p>
+  <p id="result-terms"></p>
+</div>
+
+<!-- if elseif else example -->
+
+{% assign myveriable = 12 %}
+{% if myveriable < 11 %}
+  <p>veraible greater then 10</p>
+  {% assign secondVar = 20 %}
+  <p>{{ secondVar }}</p>
+{% elsif myveriable < 13 %}
+  <p>else if veraible greater then 10</p>
+{% else %}
+  <p>veraible is not greater then 10</p>
+{% endif %}
+
+{% assign todayDate = 'tuesday' %}
+{% if todayDate == 'monday' %}
+  <p>today is monday</p>
+{% elsif todayDate == 'tuesday' %}
+  <p>today is tuesday</p>
+{% elsif todayDate == 'wednesday' %}
+  <p>today is wednesday</p>
+{% elsif todayDate == 'thursday' %}
+  <p>today is thursday</p>
+{% elsif todayDate == 'friday' %}
+  <p>today is friday</p>
+{% elsif todayDate == 'saturday' %}
+  <p>today is saturday</p>
+{% elsif todayDate == 'sunday' %}
+  <p>today is sunday</p>
+{% else %}
+  <p>please enter a valid day of the week</p>
+{% endif %}
+
+<!-- case example -->
+
+{% assign day = 'monday' %}
+
+{% case day %}
+  {% when 'monday' %}
+    <p>Start the week with enthusiasm!</p>
+  {% when 'tuesday' %}
+    <p>Keep up the momentum!</p>
+  {% when 'wednesday' %}
+    <p>Midweek hustle time!</p>
+  {% when 'thursday' %}
+    <p>Almost there, stay strong!</p>
+  {% when 'friday' %}
+    <p>Finish the week on a high note!</p>
+  {% when 'saturday' %}
+    <p>Enjoy your weekend!</p>
+  {% when 'sunday' %}
+    <p>Take a break and recharge for the week ahead!</p>
+  {% else %}
+    <p>Invalid day, please check your input.</p>
+{% endcase %}
+
+
+<!-- and example -->
+
+{% assign user_role = "admin" %}
+{% assign is_logged_in = true %}
+
+{% if user_role == "admin" and is_logged_in %}
+  <p class="pHoldar">Welcome, Admin! You have full access.</p>
+{% endif %}
+
+<!-- or example -->
+
+{% assign user_role = "editor" %}
+{% assign is_logged_in = true %}
+
+{% if user_role == "admin" or user_role == "editor" %}
+  <p class="pHoldar">Welcome! You have editing privileges.</p>
+{% endif %}
+
+<!-- not example -->
+{% assign is_logged_in = true %}
+
+{% unless is_logged_in %}
+  <p>Please log in to continue.</p>
+  {% else %}
+  <p>not  login to continue.</p>
+{% endunless %}
+
+<!-- combination and or not example -->
+
+{% assign is_logged_in = "Talha" %}
+{% assign has_admin_access = "Taha" %}
+{% assign is_guest = "tayyab" %}
+
+{% if has_admin_access == "Taha" or is_guest == "tayyab" %}
+  {% if is_guest == "tayyab" %}
+    <p class="green">family.</p>
+  {% else %}
+    <p>Welcome to the dashboard!</p>
+  {% endif %}
+{% else %}
+  <p>Welcome to the dashboard!</p>
+{% endif %}
+
+{% comment %} Example break and continue {% endcomment %}
+
+{% assign text = "Hello 123 World" %}
+{% assign chars = text | split: "" %}
+
+{% for char in chars %}
+  {% if char == "0" or char == "1" or char == "2" or char == "3" or char == "4" or char == "5" or char == "6" or char == "7" or char == "8" or char == "9" %}
+    {% continue %} <!-- Skip digits -->
+  {% endif %}
+  {% if char == " " %}
+    {% break %} <!-- Stop when a space is found -->
+  {% endif %}
+  <p>Character: {{ char }}</p>
+{% endfor %}
+
+{% for item in (1..5) %}
+  <p>{{item}} : product {{forloop.index0}}</p>
+{% endfor %}
+
+{% comment %} 1. String Filters liquid {% endcomment %}
+
+
+{% assign message = "  Hello, Talha Hamayoun!  " %}
+<p>Original: {{ message }}</p>
+<p>Uppercase: {{ message | upcase }}</p>
+<p>Lowercase: {{ message | downcase }}</p>
+<p>Truncated: {{ message | truncate: 7 }}</p>
+<p>Stripped: {{ message | strip }}</p>
+<p>Replaced: {{ message | replace: "Talha", "Taha" }}</p>
+
+{% comment %} 2. Number Filters liquid {% endcomment %}
+
+{% assign number = 2 %}
+<p>Original: {{ number }}</p>
+<p>Plus 5: {{ number | plus: 5 }}</p>
+<p>Minus 3: {{ number | minus: 3 }}</p>
+<p>Times 2: {{ number | times: 2 }}</p>
+<p>Divided by 4: {{ number | divide_by: 4 }}</p>
+<p>Rounded: {{ number | round: 1 }}</p>
+<p>Ceil: {{ number | ceil }}</p>
+<p>Floor: {{ number | floor }}</p>
+
+{% comment %} 3. Array Filters {% endcomment %}
+
+{% assign names = "Talha,Taha,Tayyab,Taha,Talha" | split: "," %}
+<p>Original: {{ names }}</p>
+<p>Joined: {{ names | join: " & " }}</p>
+<p>Sorted: {{ names | sort | join: ", " }}</p>
+<p>Unique: {{ names | sort | uniq | join: ", " }}</p>
+<p>Size: {{ names | size }}</p>
+
+{% comment %} 4. Date Filters {% endcomment %}
+
+{% assign current_date = "2024-12-26" %}
+<p>Original Date: {{ current_date }}</p>
+<p>Formatted: {{ current_date | date: "%B %d, %Y" }}</p>
+<p>Year: {{ current_date | date: "%Y" }}</p>
+<p>Month: {{ current_date | date: "%B" }}</p>
+<p>Day: {{ current_date | date: "%A" }}</p>
+
+{% comment %} Combined Example {% endcomment %}
+
+{% assign products = "Mobile,Laptop ,Tablet ,Mobile,Laptop    " | split: "," %}
+{% assign price = 123.456 %}
+{% assign current_date = "2024-12-26" %}
+
+<p>Product List: {{ products | sort | uniq | join: ", " }}</p>
+<p>Product Count: {{ products | size }}</p>
+<p>Rounded Price: {{ price | round: 1 }}</p>
+<p>Formatted Date: {{ current_date | date: "%d %B %Y" }}</p>
+<p>Uppercase First Product: {{ products[0] | upcase }}</p>
+
+{% assign text = "   hello, world!   " %}
+<p>Uppercase and Stripped: "{{ text | strip | upcase }}"</p>
+
+{% assign name = "" %}
+<p>Name: {{ name | default: "Guest" }}</p>
+
+{% comment %} color filter {% endcomment %}
+
+{% assign primary_color = "#ff5733" %}
+<div style="background-color: {{ primary_color }};">
+  This div has a background color.
+</div>
+
+{% assign status = "" %}
+
+{% if status == "success" %}
+  {% assign color = "#28a745" %}
+{% elsif status == "error" %}
+  {% assign color = "#dc3545" %}
+{% else %}
+  {% assign color = "#ffc107" %}
+{% endif %}
+
+<p style="color: {{ color }};">Status: {{ status }}</p>
+
+{% assign colors = "red, blue, green" | split: ", " %}
+
+<ul>
+  {% for color in colors %}
+    <li style="color: {{ color |  color_darken: 10 }};">
+      {{ color }}
+    </li>
+  {% endfor %}
+</ul>

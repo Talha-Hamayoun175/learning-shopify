@@ -1,0 +1,13 @@
+.content-for-layout {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+
+    .cart__footer {
+        border: 1px solid rgb(148, 148, 148);
+        padding: 29px;
+        border-radius: 18px;
+        margin-top: 54px;
+    }
+}

@@ -1,0 +1,80 @@
+{{ 'sections-tutorial-image-banner.css' | asset_url | stylesheet_tag }}
+
+{% case product.title %}
+  {% when 'Abaya Gowns' %}
+    <p class="green">this product title is Abaya Gowns</p>
+  {% else %}
+    <p>this is not a product</p>
+{% endcase %}
+
+<p>{{ product.price }}</p>
+<p>{{ product.price | money }}</p>
+<p>{{ product.price | money_with_currency }}</p>
+<p>Description: {{ product.description }}</p>
+<p>SKU: {{ product.sku }}</p>
+<p>Product Type: {{ product.type }}</p>
+
+<p>Vendor: {{ product.vendor }}</p>
+
+{% for variant in product.variants %}
+  <p>color: {{ variant.option1 }}</p>
+  <p>size: {{ variant.option2 }}</p>
+{% endfor %}
+
+{% if product.description.blank? %}
+  <p>This product has no description.</p>
+{% else %}
+  <p>{{ product.description }}</p>
+{% endif %}
+
+{% assign user_email = 'talha123@gmail.com' %}
+
+{% if user_email.blank? %}
+  <p>Please provide an email address.</p>
+{% else %}
+  <p>Your email is: {{ user_email }}</p>
+{% endif %}
+
+{% for product in collection.products limit: 2 %}
+  <p
+    style="
+      {% if forloop.first %}
+      color: red;
+      {% elsif forloop.last %}
+      color: orange;
+      {% endif %}
+    "
+  >
+    {{ forloop.index }} - {{ product.title }}
+  </p>
+{% endfor %}
+
+{% paginate collection.products by 5 %}
+  {% for product in collection.products %}
+    <p>
+      {{ product.title }}
+    </p>
+  {% endfor %}
+  {{ paginate | default_pagination }}
+{% endpaginate %}
+
+{% paginate collection.products by 3 %}
+    <ul>
+      {% for product in collection.products %}
+        <li>{{ product.title }}</li>
+      {% endfor %}
+    </ul>
+  
+    <div class="pagination-controls">
+      {% if paginate.previous %}
+        <a class="btn-prev" href="{{ paginate.previous.url }}">&#171; Previous</a>
+      {% endif %}
+  
+      <span>Page {{ paginate.current_page }} of {{ paginate.pages }}</span>
+  
+      {% if paginate.next %}
+        <a class="btn-next" href="{{ paginate.next.url }}">Next &#187;</a>
+      {% endif %}
+    </div>
+  {% endpaginate %}
+  

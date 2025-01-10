@@ -1,0 +1,21 @@
+<thead {{block.shopify_attributes}}>
+    <tr {{block.shopify_attributes}}>
+        {% content_for 'blocks' %}
+    </tr>
+</thead>
+
+{% schema %}
+{
+    "name": "Table header",
+    "blocks": [
+        {
+            "type": "table-cell"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Table Header"
+        }
+    ]
+}
+{% endschema %}

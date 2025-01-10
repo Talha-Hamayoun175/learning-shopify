@@ -7,6 +7,7 @@
 
 {{ 'quantity-popover.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'progress-bar.css' | asset_url | stylesheet_tag }}
 
 <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'quantity-popover.js' | asset_url }}" defer="defer"></script>
@@ -75,6 +76,37 @@
           class=" is-empty"
         {% endif %}
       >
+
+      <div class="shipping-progress">
+        {% assign free_shipping = 100 %}
+        {% assign cart_total = cart.total_price | divided_by: 100 %}
+        {% assign percentage = cart_total | times: 100 | divided_by: free_shipping %}
+
+        {% if cart_total >= free_shipping %}
+          <p class="text-holder">
+            🎉 Free shipping Eligibility!
+          </p>
+        {% else %}
+          <p class= "inner-text">
+            Add ${{ free_shipping | minus: cart_total }} more for free shipping!
+          </p>
+        {% endif %}
+        <!-- Progress Bar -->
+          <div class="progress-bar-wrapper">
+            <div
+            class="progress-bar-inner"
+              style="
+                background-color: {% if percentage < 100 %}red{% else %}green{% endif %};
+                width: {{ percentage }}%;">
+            </div>
+          </div>
+
+        <!-- Display Percentage -->
+        <p class="text-shipping">
+          {{ percentage | round }}% towards free shipping
+        </p>
+      </div>
+
         <form
           action="{{ routes.cart_url }}"
           id="CartDrawer-Form"
@@ -138,6 +170,11 @@
                           <a href="{{ item.url }}" class="cart-item__name h4 break">
                             {{- item.product.title | escape -}}
                           </a>
+                          <div class="product-card">
+                            {% if item.variant.inventory_quantity <= 3 %}
+                              <span style="color: red; font-size: 12px;">Low Stock</span>
+                            {% endif %}
+                          </div>
 
                           {%- if item.original_price != item.final_price -%}
                             <div class="cart-item__discounted-prices">

@@ -159,6 +159,12 @@
             >
               {{ card_product.title | escape }}
             </a>
+            <div class="product-card">
+              {% if card_product.variants.size == 1 and card_product.variants[0].inventory_quantity <= 3 %}
+                <span style="color: red; font-size: 12px;">Low Stock</span>
+              {% endif %}
+            </div>
+
           </h3>
           <div class="card-information">
             {%- if show_vendor -%}

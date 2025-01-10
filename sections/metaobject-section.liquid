@@ -1,0 +1,77 @@
+<div class="page-width">
+<h2>Metaobject </h2>
+  {{ section.settings.maker.image | image_url: width: 400 | image_tag }}
+  {{ section.settings.maker.bio | metafield_tag }}
+  <p>
+    {{ section.settings.maker.name }}
+    <br>
+  </p>
+</div>
+
+<div class="page-width">
+  {% if section.settings.makers.count > 0 %}
+    <h2>Metaobject List</h2>
+    <p> Count: {{ section.settings.makers.count }}</p>
+
+    {% for item in section.settings.makers %}
+        <p>{{ item.name }}</p>
+      {{ item.image | image_url: width: 200 | image_tag }}
+      {{ item.bio | metafield_tag }}
+    {% endfor %}
+  {% endif %}
+
+  {% for variant in section.settings.variants.variants.value %}
+    <p>{{variant.product.title}} : {{ variant.title }}</p>
+  {% endfor %}
+</div>
+
+{% comment %}
+  <div class="page-width">
+      {% for product in collections.all.products %}
+          {% if product.metafields.custom.craftperson.value.system.handle == metaobject.system.handle %}
+              <a href="{{ product.url }}">
+                  {{ product.featured_image | image_url: width: 300 |  image_tag }}
+                  <p>{{ product.title }}</p>
+                  <p>{{ product.price |  money }}</p>
+              </a>
+          {% endif %}
+      {% endfor %}
+  </div>
+{% endcomment %}
+
+{% schema %}
+{
+  "name": "Metaobject Section",
+  "class": "page-width",
+  "settings": [
+    {
+      "type": "metaobject",
+      "id": "maker",
+      "label": "Maker",
+      "metaobject_type": "craftperson"
+    },
+    {
+      "type": "metaobject_list",
+      "id": "makers",
+      "label": "Makers",
+      "metaobject_type": "craftperson"
+    },
+    {
+      "type": "metaobject",
+      "id": "variants",
+      "label": "Variants",
+      "metaobject_type": "variant_list"
+    },
+    {
+      "type": "text",
+      "label": "Text",
+      "id": "text-id"
+    }
+  ],
+  "presets": [
+    {
+      "name": "metaobject section"
+    }
+  ]
+}
+{% endschema %}

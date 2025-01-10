@@ -1,0 +1,17 @@
+<h2>All Products Inventory</h2>
+<div>
+  {% for product in collections.all.products %}
+    <div class="product-card">
+      <p>Product: {{ product.title }}</p>
+      {% if product.variants[0].inventory_quantity <= 3 %}
+        <p>
+          Inventory: {{ product.variants[0].inventory_quantity }}
+          <span style="color: red">Low Stock</span>
+        </p>
+      {% else %}
+        <p>Inventory: {{ product.variants[0].inventory_quantity }}</p>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>
+

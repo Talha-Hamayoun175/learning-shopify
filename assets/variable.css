@@ -1,0 +1,29 @@
+:root {
+    /* Colors */
+    --primary-color: #545353;
+    --secondary-color: #000000;
+    --background-color: #f4f4f4;
+    --border-color: #ccc;
+    --text-color: #555;
+    --highlight-color: #007bff;
+    --highlight-hover-color: #0056b3;
+    --boolean-bg-color: #e9f7fd;
+    --result-bg-color: #f9f9f9;
+
+    /* Spacing */
+    --padding-small: 10px;
+    --padding-medium: 15px;
+    --padding-large: 20px;
+
+    /* Font sizes */
+    --font-size-small: 1em;
+    --font-size-medium: 1.2em;
+    --font-size-large: 16px;
+
+    /* Border radius */
+    --border-radius-small: 5px;
+    --border-radius-medium: 10px;
+
+    /* Widths */
+    --form-width: 500px;
+}

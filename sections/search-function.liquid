@@ -1,0 +1,39 @@
+{{ 'search-function.css' | asset_url | stylesheet_tag }}
+
+<div>
+    <p>{{ section.settings.text-id }}</p>
+</div>
+
+<div class="page-width">
+  <!-- New functionality -->
+  <div class="search-container">
+    <input type="text" id="product-search-input" placeholder="Enter product name" />
+    <button id="product-search-button">Enter</button>
+  </div>
+  <div class="search-results" style="display: none;">
+    <h3>Search Results</h3>
+    <div id="search-results-grid" class="grid"></div>
+  </div>
+</div>
+
+
+<script src="{{ 'search-function.js' | asset_url }}" async></script>
+
+
+{% schema %}
+{
+  "name": "All Search",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Text",
+      "id": "text-id"
+    }
+  ],
+  "presets": [
+    {
+      "name": "All Search"
+    }
+  ]
+}
+{% endschema %}
